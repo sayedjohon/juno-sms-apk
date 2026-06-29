@@ -8,6 +8,25 @@
         app:layout="@layout/developer_header"
         app:selectable="false" />
 
+    <PreferenceCategory app:title="JunoSMS Service">
+        <Preference
+            android:icon="@drawable/ic_website"
+            android:key="app.web_console"
+            android:title="@string/web_console"
+            android:summary="@string/web_console_summary">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://autosmsai.junoverseai.com" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_website"
+            android:key="app.privacy_policy"
+            android:title="@string/privacy_policy"
+            android:summary="autosmsai.junoverseai.com/privacy">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://autosmsai.junoverseai.com/privacy" />
+        </Preference>
+    </PreferenceCategory>
+
     <PreferenceCategory app:title="@string/contact_info">
         <Preference
             android:icon="@drawable/ic_email"

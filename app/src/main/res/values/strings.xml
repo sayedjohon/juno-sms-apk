@@ -15,7 +15,7 @@
     <string
         name="click_continue_to_create_an_account_no_personal_information_is_required_nby_continuing_you_agree_to_our_privacy_policy_at_https_docs_sms_gate_app_privacy_policy">Click
         Continue to create an account. No personal information is required.\nBy continuing, you
-        agree to our Privacy Policy at https://junoverseai.com/privacy</string>
+        agree to our Privacy Policy at https://autosmsai.junoverseai.com/privacy</string>
     <string name="cloud_server_dotdotdot">Cloud server…</string>
     <string name="cloud_server">Cloud server</string>
     <string name="cloud">Cloud</string>
@@ -186,4 +186,9 @@
     <string name="reset_registration">Reset Registration</string>
     <string name="reset_registration_summary">Unregister this device and clear credentials</string>
     <string name="registration_reset_success">Registration cleared. Restart the app or turn Cloud Server back on to register again.</string>
+    <string name="web_console">Web Console Dashboard</string>
+    <string name="web_console_url" translatable="false">https://autosmsai.junoverseai.com</string>
+    <string name="web_console_summary">Visit your SMS dashboard online</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_url" translatable="false">https://autosmsai.junoverseai.com/privacy</string>
 </resources>
