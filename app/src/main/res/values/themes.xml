@@ -18,7 +18,6 @@
         <!-- Surfaces -->
         <item name="colorSurface">@color/bg_surface</item>
         <item name="colorOnSurface">@color/text_primary</item>
-        <item name="colorBackground">@color/bg_primary</item>
         <item name="android:colorBackground">@color/bg_primary</item>
         <item name="colorOnBackground">@color/text_primary</item>
 
