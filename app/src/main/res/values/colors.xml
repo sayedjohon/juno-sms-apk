@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base neutrals — deep navy scale -->
+    <color name="bg_primary">#0D1117</color>
+    <color name="bg_surface">#161B22</color>
+    <color name="bg_card">#1C2333</color>
+    <color name="bg_card_elevated">#21284A</color>
+
+    <!-- Accent — electric cyan (matches logo glow) -->
+    <color name="accent_cyan">#00D4FF</color>
+    <color name="accent_cyan_dim">#1A3A4A</color>
+    <color name="accent_cyan_alpha">#2600D4FF</color>
+
+    <!-- Status colors -->
+    <color name="status_online">#00E5A0</color>
+    <color name="status_online_bg">#1A2E27</color>
+    <color name="status_offline">#FF4F6B</color>
+    <color name="status_offline_bg">#2E1A22</color>
+    <color name="status_warning">#FFB340</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F0F6FF</color>
+    <color name="text_secondary">#8892A4</color>
+    <color name="text_dim">#4A5568</color>
+    <color name="text_link">#00D4FF</color>
+
+    <!-- Divider -->
+    <color name="divider">#1E2D3D</color>
+    <color name="border_card">#2A3550</color>
+
+    <!-- Legacy compat -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,4 +37,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="progressBarOverlay">#33FFFFFF</color>
+    <color name="connection_status_background">#1A2E27</color>
 </resources>
