@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.res.ColorStateList
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -278,8 +279,23 @@ class HomeFragment : Fragment() {
             }
         }
 
-        stateLiveData.observe(viewLifecycleOwner) {
-            binding.buttonStart.isChecked = it
+        stateLiveData.observe(viewLifecycleOwner) { isOnline ->
+            binding.buttonStart.isChecked = isOnline
+            
+            val (textRes, textColorRes, bgRes) = if (isOnline) {
+                Triple(R.string.settings_online, R.color.status_online, R.color.status_online_bg)
+            } else {
+                Triple(R.string.settings_offline, R.color.status_offline, R.color.status_offline_bg)
+            }
+            
+            binding.buttonStart.text = getString(textRes)
+            
+            val textColor = ContextCompat.getColor(requireContext(), textColorRes)
+            val bgColor = ContextCompat.getColor(requireContext(), bgRes)
+            
+            binding.buttonStart.setTextColor(textColor)
+            binding.buttonStart.backgroundTintList = ColorStateList.valueOf(bgColor)
+            binding.buttonStart.strokeColor = ColorStateList.valueOf(textColor)
         }
 
         connectionService.status.observe(viewLifecycleOwner) {

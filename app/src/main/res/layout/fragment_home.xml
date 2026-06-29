@@ -336,6 +336,7 @@
             android:letterSpacing="0.08"
             android:fontFamily="sans-serif-medium"
             android:textAllCaps="true"
+            android:checkable="true"
             app:backgroundTint="@color/accent_green_pale"
             android:textColor="@color/accent_green"
             app:strokeColor="@color/accent_green"
