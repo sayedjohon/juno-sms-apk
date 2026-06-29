@@ -39,6 +39,9 @@
     <!-- ── Icon badge bg ── -->
     <color name="icon_badge_bg">#D8F3DC</color>
 
+    <!-- ── Adaptive icon background ── -->
+    <color name="ic_launcher_background">#2D6A4F</color>
+
     <!-- Legacy compat -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
