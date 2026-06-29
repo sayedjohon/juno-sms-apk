@@ -106,6 +106,24 @@ class CloudServerSettingsFragment : BasePreferenceFragment() {
             }
         }
 
+        findPreference<Preference>("gateway.reset_registration")?.apply {
+            isVisible = settings.username != null
+
+            onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                service.stop(requireContext())
+                settings.registrationInfo = null
+                settings.fcmToken = null
+                settings.enabled = false
+                isVisible = false
+                findPreference<Preference>("gateway.clear_password")?.isVisible = false
+                findPreference<Preference>("gateway.login_code")?.isVisible = false
+                findPreference<Preference>("transient.device_id")?.summary = getString(R.string.n_a)
+                listView.adapter?.notifyDataSetChanged()
+                showToast(R.string.registration_reset_success)
+                true
+            }
+        }
+
         findPreference<Preference>("gateway.login_code")?.apply {
             isVisible = settings.username != null
 

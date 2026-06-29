@@ -183,4 +183,7 @@
     <string name="websites">Websites &amp; Portfolio</string>
     <string name="copy_all_credentials">Copy All Credentials</string>
     <string name="credentials_copied">All credentials copied to clipboard</string>
+    <string name="reset_registration">Reset Registration</string>
+    <string name="reset_registration_summary">Unregister this device and clear credentials</string>
+    <string name="registration_reset_success">Registration cleared. Restart the app or turn Cloud Server back on to register again.</string>
 </resources>
