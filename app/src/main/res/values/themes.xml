@@ -1,19 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- ═══════════════════════════════════════════
-         Juno SMS — Premium Dark Theme
-         Base: Deep Navy #0D1117 | Accent: Cyan #00D4FF
+         Juno SMS — Botanical Green Light Theme
+         Base: #F5F7F4 | Accent: Forest Green #2D6A4F
          ═══════════════════════════════════════════ -->
-    <style name="Theme.SmsGateway" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.SmsGateway" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color -->
-        <item name="colorPrimary">@color/accent_cyan</item>
-        <item name="colorPrimaryVariant">@color/bg_surface</item>
-        <item name="colorOnPrimary">@color/bg_primary</item>
+        <item name="colorPrimary">@color/accent_green</item>
+        <item name="colorPrimaryVariant">@color/nav_bg</item>
+        <item name="colorOnPrimary">@color/white</item>
 
-        <!-- Secondary brand color -->
-        <item name="colorSecondary">@color/accent_cyan</item>
-        <item name="colorSecondaryVariant">@color/accent_cyan_dim</item>
-        <item name="colorOnSecondary">@color/bg_primary</item>
+        <!-- Secondary -->
+        <item name="colorSecondary">@color/accent_green_mid</item>
+        <item name="colorSecondaryVariant">@color/accent_green_light</item>
+        <item name="colorOnSecondary">@color/white</item>
 
         <!-- Surfaces -->
         <item name="colorSurface">@color/bg_surface</item>
@@ -23,16 +23,16 @@
         <item name="colorOnBackground">@color/text_primary</item>
 
         <!-- Card -->
-        <item name="colorSurfaceVariant">@color/bg_card</item>
+        <item name="colorSurfaceVariant">@color/bg_card_elevated</item>
         <item name="colorOnSurfaceVariant">@color/text_secondary</item>
 
-        <!-- Status bar — deep navy, light icons -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/bg_primary</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
-        <item name="android:navigationBarColor">@color/bg_primary</item>
+        <!-- Status bar — white, dark icons -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/bg_surface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:navigationBarColor">@color/nav_bg</item>
 
         <!-- Ripple -->
-        <item name="rippleColor">@color/accent_cyan_alpha</item>
+        <item name="rippleColor">@color/accent_green_alpha</item>
 
         <!-- Text -->
         <item name="android:textColorPrimary">@color/text_primary</item>
@@ -57,17 +57,17 @@
         <item name="strokeWidth">1dp</item>
     </style>
 
-    <!-- Bottom Navigation -->
+    <!-- Bottom Navigation — deep green bg, white active -->
     <style name="JunoBottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="android:background">@color/bg_surface</item>
+        <item name="android:background">@color/nav_bg</item>
         <item name="itemIconTint">@color/nav_item_color</item>
         <item name="itemTextColor">@color/nav_item_color</item>
         <item name="labelVisibilityMode">labeled</item>
     </style>
 
-    <!-- Switch -->
+    <!-- Switch — green when ON -->
     <style name="JunoSwitch" parent="Widget.MaterialComponents.CompoundButton.Switch">
-        <item name="colorControlActivated">@color/accent_cyan</item>
+        <item name="colorControlActivated">@color/accent_green</item>
         <item name="thumbTint">@color/switch_thumb_color</item>
         <item name="trackTint">@color/switch_track_color</item>
     </style>
@@ -80,7 +80,7 @@
         <item name="android:layout_margin">4dp</item>
         <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:letterSpacing">0.04</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="HomeCardValue" parent="Widget.AppCompat.TextView">
@@ -91,30 +91,7 @@
         <item name="android:layout_margin">4dp</item>
         <item name="android:textColor">@color/text_link</item>
         <item name="android:textSize">13sp</item>
-    </style>
-
-    <!-- Status button — ONLINE -->
-    <style name="StatusButtonOnline" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/status_online_bg</item>
-        <item name="android:textColor">@color/status_online</item>
-        <item name="strokeColor">@color/status_online</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="cornerRadius">14dp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:letterSpacing">0.1</item>
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <!-- Status button — OFFLINE -->
-    <style name="StatusButtonOffline" parent="Widget.MaterialComponents.Button">
-        <item name="backgroundTint">@color/status_offline_bg</item>
-        <item name="android:textColor">@color/status_offline</item>
-        <item name="strokeColor">@color/status_offline</item>
-        <item name="strokeWidth">1dp</item>
-        <item name="cornerRadius">14dp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:letterSpacing">0.1</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
 </resources>

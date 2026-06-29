@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base neutrals — deep navy scale -->
-    <color name="bg_primary">#0D1117</color>
-    <color name="bg_surface">#161B22</color>
-    <color name="bg_card">#1C2333</color>
-    <color name="bg_card_elevated">#21284A</color>
+    <!-- ── Base surfaces — clean light ── -->
+    <color name="bg_primary">#F5F7F4</color>
+    <color name="bg_surface">#FFFFFF</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card_elevated">#F0F5F0</color>
 
-    <!-- Accent — electric cyan (matches logo glow) -->
-    <color name="accent_cyan">#00D4FF</color>
-    <color name="accent_cyan_dim">#1A3A4A</color>
-    <color name="accent_cyan_alpha">#2600D4FF</color>
+    <!-- ── Forest green accent palette ── -->
+    <color name="accent_green">#2D6A4F</color>
+    <color name="accent_green_mid">#40916C</color>
+    <color name="accent_green_light">#74C69D</color>
+    <color name="accent_green_pale">#D8F3DC</color>
+    <color name="accent_green_alpha">#332D6A4F</color>
 
-    <!-- Status colors -->
-    <color name="status_online">#00E5A0</color>
-    <color name="status_online_bg">#1A2E27</color>
-    <color name="status_offline">#FF4F6B</color>
-    <color name="status_offline_bg">#2E1A22</color>
-    <color name="status_warning">#FFB340</color>
+    <!-- ── Bottom nav / header ── -->
+    <color name="nav_bg">#1B4332</color>
+    <color name="nav_active">#FFFFFF</color>
+    <color name="nav_inactive">#74A88B</color>
 
-    <!-- Text -->
-    <color name="text_primary">#F0F6FF</color>
-    <color name="text_secondary">#8892A4</color>
-    <color name="text_dim">#4A5568</color>
-    <color name="text_link">#00D4FF</color>
+    <!-- ── Status colors ── -->
+    <color name="status_online">#2D6A4F</color>
+    <color name="status_online_bg">#D8F3DC</color>
+    <color name="status_offline">#C0392B</color>
+    <color name="status_offline_bg">#FDEDEC</color>
+    <color name="status_warning">#E67E22</color>
+    <color name="connection_status_background">#D8F3DC</color>
 
-    <!-- Divider -->
-    <color name="divider">#1E2D3D</color>
-    <color name="border_card">#2A3550</color>
+    <!-- ── Text ── -->
+    <color name="text_primary">#1A2E1E</color>
+    <color name="text_secondary">#5A7A63</color>
+    <color name="text_dim">#9EB5A5</color>
+    <color name="text_link">#2D6A4F</color>
+
+    <!-- ── Borders / dividers ── -->
+    <color name="divider">#E8F0EA</color>
+    <color name="border_card">#DCE8DE</color>
+
+    <!-- ── Icon badge bg ── -->
+    <color name="icon_badge_bg">#D8F3DC</color>
 
     <!-- Legacy compat -->
     <color name="purple_200">#FFBB86FC</color>
@@ -37,5 +48,4 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="progressBarOverlay">#33FFFFFF</color>
-    <color name="connection_status_background">#1A2E27</color>
 </resources>

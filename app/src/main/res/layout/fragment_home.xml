@@ -74,7 +74,7 @@
                             android:layout_width="44dp"
                             android:layout_height="44dp"
                             android:background="@drawable/icon_badge_bg"
-                            android:backgroundTint="#1A2E3A">
+                            android:backgroundTint="@color/icon_badge_bg">
 
                             <ImageView
                                 android:id="@+id/imageLocalServer"
@@ -82,7 +82,7 @@
                                 android:layout_height="22dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/ic_local_server"
-                                app:tint="@color/accent_cyan" />
+                                app:tint="@color/accent_green" />
                         </FrameLayout>
 
                         <LinearLayout
@@ -201,7 +201,7 @@
                             android:layout_width="44dp"
                             android:layout_height="44dp"
                             android:background="@drawable/icon_badge_bg"
-                            android:backgroundTint="#1A2E3A">
+                            android:backgroundTint="@color/icon_badge_bg">
 
                             <ImageView
                                 android:id="@+id/imageRemoteServer"
@@ -209,7 +209,7 @@
                                 android:layout_height="22dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/ic_cloud_server"
-                                app:tint="@color/accent_cyan" />
+                                app:tint="@color/accent_green" />
                         </FrameLayout>
 
                         <LinearLayout
@@ -336,9 +336,9 @@
             android:letterSpacing="0.08"
             android:fontFamily="sans-serif-medium"
             android:textAllCaps="true"
-            app:backgroundTint="@color/accent_cyan_dim"
-            android:textColor="@color/accent_cyan"
-            app:strokeColor="@color/accent_cyan"
+            app:backgroundTint="@color/accent_green_pale"
+            android:textColor="@color/accent_green"
+            app:strokeColor="@color/accent_green"
             app:strokeWidth="1dp"
             app:cornerRadius="14dp"
             android:text="@string/settings_offline"
