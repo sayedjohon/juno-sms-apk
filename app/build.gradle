@@ -66,6 +66,16 @@ android {
         exclude 'META-INF/INDEX.LIST'
         exclude 'META-INF/io.netty.versions.properties'
     }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def baseName = "JunoSMS"
+            if (variant.buildType.name == "release") {
+                outputFileName = "${baseName}.apk"
+            } else {
+                outputFileName = "${baseName}-${variant.buildType.name}.apk"
+            }
+        }
+    }
     namespace 'me.capcom.smsgateway'
 }
 
