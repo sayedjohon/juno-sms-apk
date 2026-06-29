@@ -308,6 +308,24 @@ class HomeFragment : Fragment() {
                 }
             }
         }
+
+        binding.buttonCopyAllLocal.setOnClickListener {
+            val server = binding.textLocalIP.text.toString()
+            val user = localServerSettings.username ?: ""
+            val pass = localServerSettings.password ?: ""
+            val deviceId = localServerSettings.deviceId ?: ""
+            val textToCopy = "Server: $server\nUsername: $user\nPassword: $pass\nDevice ID: $deviceId"
+            copyToClipboard(textToCopy)
+        }
+
+        binding.buttonCopyAllRemote.setOnClickListener {
+            val server = binding.textRemoteAddress.text.toString()
+            val user = gatewaySettings.username ?: ""
+            val pass = gatewaySettings.password ?: ""
+            val deviceId = gatewaySettings.deviceId ?: ""
+            val textToCopy = "Server: $server\nUsername: $user\nPassword: $pass\nDevice ID: $deviceId"
+            copyToClipboard(textToCopy)
+        }
     }
 
     private fun makeCopyableLink(source: Spanned): Spanned {
@@ -340,6 +358,14 @@ class HomeFragment : Fragment() {
         }
 
         return builder.toSpanned()
+    }
+
+    private fun copyToClipboard(text: String) {
+        val clipboard = requireContext().getSystemService(
+            Context.CLIPBOARD_SERVICE
+        ) as ClipboardManager
+        clipboard.setPrimaryClip(ClipData.newPlainText("", text))
+        Toast.makeText(context, R.string.credentials_copied, Toast.LENGTH_SHORT).show()
     }
 
     override fun onResume() {

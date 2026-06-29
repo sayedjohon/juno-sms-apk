@@ -181,4 +181,6 @@
     <string name="contact_info">Contact Information</string>
     <string name="social_media">Social Media Channels</string>
     <string name="websites">Websites &amp; Portfolio</string>
+    <string name="copy_all_credentials">Copy All Credentials</string>
+    <string name="credentials_copied">All credentials copied to clipboard</string>
 </resources>

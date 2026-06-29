@@ -167,6 +167,19 @@
                             android:id="@+id/textLocalDeviceId"
                             style="@style/HomeCardValue"
                             tools:text="juno-device-001" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonCopyAllLocal"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_columnSpan="2"
+                            android:layout_gravity="fill_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/copy_all_credentials"
+                            android:textColor="@color/accent_green"
+                            app:icon="@drawable/ic_copy"
+                            app:iconTint="@color/accent_green" />
                     </GridLayout>
 
                 </LinearLayout>
@@ -286,6 +299,19 @@
                             android:id="@+id/textRemoteDeviceId"
                             style="@style/HomeCardValue"
                             tools:text="juno-cloud-001" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonCopyAllRemote"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_columnSpan="2"
+                            android:layout_gravity="fill_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/copy_all_credentials"
+                            android:textColor="@color/accent_green"
+                            app:icon="@drawable/ic_copy"
+                            app:iconTint="@color/accent_green" />
                     </GridLayout>
 
                 </LinearLayout>
