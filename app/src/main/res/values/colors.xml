@@ -24,7 +24,6 @@
     <color name="status_offline">#C0392B</color>
     <color name="status_offline_bg">#FDEDEC</color>
     <color name="status_warning">#E67E22</color>
-    <color name="connection_status_background">#D8F3DC</color>
 
     <!-- ── Text ── -->
     <color name="text_primary">#1A2E1E</color>
