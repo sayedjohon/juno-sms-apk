@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "000000000000",
-    "project_id": "juno-sms-app",
-    "storage_bucket": "juno-sms-app.appspot.com"
+    "project_number": "891296455424",
+    "project_id": "junosms-d2828",
+    "storage_bucket": "junosms-d2828.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:000000000000:android:0000000000000000",
+        "mobilesdk_app_id": "1:891296455424:android:2098cf3735a42b84c8b1e5",
         "android_client_info": {
           "package_name": "com.junoverseai.autosms"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "PLACEHOLDER_KEY"
+          "current_key": "AIzaSyAw9HA2f2sP-tVIY_MrQ7COyVB1907jVvI"
         }
       ],
       "services": {
