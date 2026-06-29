@@ -9,6 +9,11 @@ class GatewaySettings(
     private val storage: KeyValueStorage,
 ) : Exporter, Importer {
     init {
+        val savedUrl = storage.get<String>(CLOUD_URL)
+        if (savedUrl != null && !savedUrl.contains("/api/")) {
+            storage.remove(CLOUD_URL)
+        }
+
         val lastUrl = storage.get<String>("last_configured_url")
         if (lastUrl != serverUrl) {
             storage.set("last_configured_url", serverUrl)
@@ -64,7 +69,7 @@ class GatewaySettings(
         private const val PRIVATE_TOKEN = "private_token"
         private const val NOTIFICATION_CHANNEL = "notification_channel"
 
-        const val PUBLIC_URL = "https://junosmsgateway-1.junoverseai.com/mobile/v1"
+        const val PUBLIC_URL = "https://junosmsgateway-1.junoverseai.com/api/mobile/v1"
     }
 
     override fun export(): Map<String, *> {
