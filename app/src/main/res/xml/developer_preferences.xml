@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Developer Header Layout -->
+    <Preference
+        android:key="developer.header"
+        app:layout="@layout/developer_header"
+        app:selectable="false" />
+
+    <PreferenceCategory app:title="@string/contact_info">
+        <Preference
+            android:icon="@drawable/ic_email"
+            android:key="developer.email"
+            android:title="Email"
+            android:summary="contact.sayedjohon@gmail.com">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="mailto:contact.sayedjohon@gmail.com" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/social_media">
+        <Preference
+            android:icon="@drawable/ic_facebook"
+            android:key="developer.facebook"
+            android:title="Facebook"
+            android:summary="https://www.facebook.com/Sjohon/">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.facebook.com/Sjohon/" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_instagram"
+            android:key="developer.instagram"
+            android:title="Instagram"
+            android:summary="https://www.instagram.com/sayed.johon/">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.instagram.com/sayed.johon/" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_youtube"
+            android:key="developer.youtube"
+            android:title="YouTube Channel"
+            android:summary="https://www.youtube.com/@JunoVerseAI">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.youtube.com/@JunoVerseAI" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_linkedin"
+            android:key="developer.linkedin"
+            android:title="LinkedIn"
+            android:summary="https://www.linkedin.com/in/sayedjohon/">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.linkedin.com/in/sayedjohon/" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_twitter"
+            android:key="developer.twitter"
+            android:title="X (Twitter)"
+            android:summary="https://x.com/sayedaljohon">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://x.com/sayedaljohon" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/websites">
+        <Preference
+            android:icon="@drawable/ic_website"
+            android:key="developer.website_peeai"
+            android:title="PeeAI (Learning Platform)"
+            android:summary="www.peeai.com">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.peeai.com" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_website"
+            android:key="developer.website_mictab"
+            android:title="MicTab (All-in-One Software)"
+            android:summary="www.MicTab.com">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.MicTab.com" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_website"
+            android:key="developer.website_junoverse"
+            android:title="Junoverse AI (Portfolio)"
+            android:summary="www.Junoverseai.com">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.Junoverseai.com" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

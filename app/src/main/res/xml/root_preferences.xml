@@ -71,6 +71,11 @@
 
     <PreferenceCategory app:title="@string/information">
         <Preference
+            android:icon="@drawable/ic_code"
+            app:fragment="me.capcom.smsgateway.ui.settings.DeveloperInfoFragment"
+            app:title="@string/developer_info"
+            app:summary="@string/developer_profile_summary" />
+        <Preference
             android:key="transient.app_version"
             android:title="@string/app_version_build"
             app:persistent="false"
