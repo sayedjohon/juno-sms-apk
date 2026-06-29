@@ -8,6 +8,14 @@ import me.capcom.smsgateway.modules.settings.get
 class GatewaySettings(
     private val storage: KeyValueStorage,
 ) : Exporter, Importer {
+    init {
+        val lastUrl = storage.get<String>("last_configured_url")
+        if (lastUrl != serverUrl) {
+            storage.set("last_configured_url", serverUrl)
+            storage.remove(REGISTRATION_INFO)
+        }
+    }
+
     enum class NotificationChannel {
         AUTO,
         SSE_ONLY,
