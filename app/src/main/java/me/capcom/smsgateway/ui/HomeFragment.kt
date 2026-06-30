@@ -73,7 +73,7 @@ class HomeFragment : Fragment() {
                         Toast.LENGTH_SHORT
                     )
                         .show()
-                    binding.buttonStart.isChecked = false
+                    binding.switchStart.isChecked = false
                     return@setFragmentResultListener
                 }
 
@@ -164,8 +164,8 @@ class HomeFragment : Fragment() {
             binding.layoutLocalServer.isVisible = isChecked
         }
 
-        binding.buttonStart.setOnClickListener {
-            actionStart(binding.buttonStart.isChecked)
+        binding.switchStart.setOnClickListener {
+            actionStart(binding.switchStart.isChecked)
         }
 
 //        if (settingsHelper.autostart) {
@@ -280,22 +280,26 @@ class HomeFragment : Fragment() {
         }
 
         stateLiveData.observe(viewLifecycleOwner) { isOnline ->
-            binding.buttonStart.isChecked = isOnline
+            binding.switchStart.isChecked = isOnline
             
-            val (textRes, textColorRes, bgRes) = if (isOnline) {
-                Triple(R.string.settings_online, R.color.status_online, R.color.status_online_bg)
+            val textRes = if (isOnline) R.string.settings_online else R.string.settings_offline
+            val textColorRes = if (isOnline) R.color.status_online else R.color.status_offline
+            val bgRes = if (isOnline) R.color.status_online_bg else R.color.status_offline_bg
+            val descText = if (isOnline) {
+                if (gatewaySettings.enabled) "Cloud Server Gateway is running" else "Local Server Gateway is running"
             } else {
-                Triple(R.string.settings_offline, R.color.status_offline, R.color.status_offline_bg)
+                "Gateway service is stopped"
             }
             
-            binding.buttonStart.text = getString(textRes)
+            binding.textStatusLabel.text = getString(textRes)
+            binding.textStatusDesc.text = descText
             
             val textColor = ContextCompat.getColor(requireContext(), textColorRes)
             val bgColor = ContextCompat.getColor(requireContext(), bgRes)
             
-            binding.buttonStart.setTextColor(textColor)
-            binding.buttonStart.backgroundTintList = ColorStateList.valueOf(bgColor)
-            binding.buttonStart.strokeColor = ColorStateList.valueOf(textColor)
+            binding.textStatusLabel.setTextColor(textColor)
+            binding.switchStart.thumbTintList = ColorStateList.valueOf(textColor)
+            binding.switchStart.trackTintList = ColorStateList.valueOf(bgColor)
         }
 
         connectionService.status.observe(viewLifecycleOwner) {

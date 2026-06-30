@@ -12,8 +12,9 @@
         android:orientation="horizontal"
         android:padding="8dp">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonOutgoing"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
@@ -21,19 +22,23 @@
             android:paddingHorizontal="12dp"
             android:paddingVertical="8dp"
             android:text="@string/outgoing_messages"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            app:cornerRadius="10dp"
+            app:strokeWidth="1dp" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonIncoming"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_weight="1"
-            android:enabled="false"
             android:paddingHorizontal="12dp"
             android:paddingVertical="8dp"
             android:text="@string/incoming_messages"
-            android:textAllCaps="true" />
+            android:textAllCaps="true"
+            app:cornerRadius="10dp"
+            app:strokeWidth="1dp" />
     </LinearLayout>
 
     <FrameLayout

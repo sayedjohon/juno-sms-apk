@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
+import android.content.res.ColorStateList
+import androidx.core.content.ContextCompat
 import me.capcom.smsgateway.R
 import me.capcom.smsgateway.databinding.FragmentHolderBinding
 
@@ -45,11 +47,15 @@ class HolderFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonOutgoing.setOnClickListener {
-            selectOutgoing()
+            if (!isOutgoingSelected) {
+                selectOutgoing()
+            }
         }
 
         binding.buttonIncoming.setOnClickListener {
-            selectIncoming()
+            if (isOutgoingSelected) {
+                selectIncoming()
+            }
         }
 
         if (savedInstanceState == null) {
@@ -66,8 +72,32 @@ class HolderFragment : Fragment() {
     }
 
     private fun updateButtonStates() {
-        binding.buttonOutgoing.isEnabled = !isOutgoingSelected
-        binding.buttonIncoming.isEnabled = isOutgoingSelected
+        val context = requireContext()
+        val activeBg = ContextCompat.getColor(context, R.color.accent_green_pale)
+        val activeText = ContextCompat.getColor(context, R.color.accent_green)
+        val activeStroke = ContextCompat.getColor(context, R.color.accent_green)
+
+        val inactiveBg = ContextCompat.getColor(context, R.color.bg_surface)
+        val inactiveText = ContextCompat.getColor(context, R.color.text_secondary)
+        val inactiveStroke = ContextCompat.getColor(context, R.color.border_card)
+
+        if (isOutgoingSelected) {
+            binding.buttonOutgoing.backgroundTintList = ColorStateList.valueOf(activeBg)
+            binding.buttonOutgoing.setTextColor(activeText)
+            binding.buttonOutgoing.strokeColor = ColorStateList.valueOf(activeStroke)
+
+            binding.buttonIncoming.backgroundTintList = ColorStateList.valueOf(inactiveBg)
+            binding.buttonIncoming.setTextColor(inactiveText)
+            binding.buttonIncoming.strokeColor = ColorStateList.valueOf(inactiveStroke)
+        } else {
+            binding.buttonOutgoing.backgroundTintList = ColorStateList.valueOf(inactiveBg)
+            binding.buttonOutgoing.setTextColor(inactiveText)
+            binding.buttonOutgoing.strokeColor = ColorStateList.valueOf(inactiveStroke)
+
+            binding.buttonIncoming.backgroundTintList = ColorStateList.valueOf(activeBg)
+            binding.buttonIncoming.setTextColor(activeText)
+            binding.buttonIncoming.strokeColor = ColorStateList.valueOf(activeStroke)
+        }
     }
 
     private fun selectOutgoing() {

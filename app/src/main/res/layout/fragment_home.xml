@@ -353,23 +353,51 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!-- Start / Stop Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/buttonStart"
+        <!-- Divider -->
+        <View
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:textSize="15sp"
-            android:letterSpacing="0.08"
-            android:fontFamily="sans-serif-medium"
-            android:textAllCaps="true"
-            android:checkable="true"
-            app:backgroundTint="@color/accent_green_pale"
-            android:textColor="@color/accent_green"
-            app:strokeColor="@color/accent_green"
-            app:strokeWidth="1dp"
-            app:cornerRadius="14dp"
-            android:text="@string/settings_offline"
-            tools:text="OFFLINE" />
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Service Status Switch row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="4dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textStatusLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    tools:text="Offline" />
+
+                <TextView
+                    android:id="@+id/textStatusDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:layout_marginTop="2dp"
+                    tools:text="Gateway service is stopped" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
